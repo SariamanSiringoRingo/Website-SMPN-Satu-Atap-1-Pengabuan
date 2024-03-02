@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SMPN Satu Atap 1 Pengabuan</title>
+    <!--My style-->
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <!--Formulir Login-->
+    <section id="login" class="login">
+        <div class="container">
+            <h2>Login</h2>
+            <!-- Tambahkan blok untuk menampilkan pesan flash -->
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                <div class="flash-message">{{ message }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            <form action="{{ url_for('readinglog') }}" method="POST" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email" required />
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                </div>
+                <!-- Tambahkan input tersembunyi untuk tindakan login -->
+                <input type="hidden" name="action" value="login" />
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,694 @@
+:root {
+  --primary: orange;
+  --bg: #ffffff;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-size: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: black;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-log {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(162, 104, 16);
+}
+
+.navbar .navbar-logo span {
+  color: van(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: black;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: orange;
+}
+
+.navbar .navbar-nav a:after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: black;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: rgb(241, 191, 10);
+  margin: 0 0.5rem;
+}
+
+#menu {
+  display: none;
+}
+
+/* Hero Home */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("/static/hero-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.8) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: rgb(96, 195, 50);
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 200;
+  color: rgb(11, 13, 12);
+  background-color: whitesmoke;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  background-color: #3f86f2;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 3, 0.5);
+}
+
+/* Enrollment */
+.enrollment {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("/static/enrol1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.enrollment::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.8) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.enrollment .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.enrollment .content h1 {
+  font-size: 5em;
+  color: rgb(202, 230, 63);
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.enrollment .content h3 {
+  color: red;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  background-color: white;
+  display: inline-block;
+}
+
+/* Visi Misi */
+
+.visimisi {
+  padding: 5rem 7% 1.4rem;
+}
+
+.visimisi h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.visimisi h3 {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.visimisi .row {
+  display: flex;
+}
+
+.visimisi .row .about-img img {
+  width: 100%;
+}
+
+.visimisi .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.visimisi .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.misivisi .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.visimisi .row .content p {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* About Us Section */
+.aboutus {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("/static/aboutus.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.download,
+.enrollment,
+.contact {
+  padding: 5rem 7% 1.4rem;
+}
+
+
+.download h2,
+.enrollment h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.aboutus .row {
+  display: flex;
+}
+
+.aboutus .row .about-img img {
+  width: 100%;
+}
+
+.aboutus .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.aboutus .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.aboutus .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.aboutus .row .content p {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* Download Section */
+
+.download .row {
+  display: flex;
+}
+
+.download .row .about-img img {
+  width: 100%;
+}
+
+.download .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.download .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.download .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.download .row .content p {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* ENROLLMENT */
+.enrollment h2,
+.contact h2 {
+  margin-bottom: 1rem;
+}
+.enrollment p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* extrakurikuler */
+.extrakuri h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.extrakuri .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.extrakuri .row .extrakuri-card {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.extrakuri .row .extrakuri-card img {
+  border-radius: 50%;
+  width: 80%;
+}
+
+.extrakuri .row .extrakuri-card .extrakuri-card title {
+  margin: 1rem auto 0.5 rem;
+}
+
+.extrakuri p,
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #fefbf6;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: white;
+  border: 1px solid black;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: black;
+}
+
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: black;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+/* Section Reading Log */
+.readinglog {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+/* Form Login */
+.login {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login h2 {
+  text-align: center;
+}
+
+.login .form-group {
+  margin-bottom: 20px;
+}
+
+.login label {
+  display: block;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login .btn {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  width: 50%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Form Registration */
+.registration {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registration h2 {
+  text-align: center;
+}
+
+.registration table {
+  width: 100%;
+}
+
+.registration table tr {
+  text-align: left;
+}
+
+.registration table tr td {
+  padding: 10px;
+}
+
+.registration input[type="text"],
+.registration input[type="email"],
+.registration input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.registration .btn {
+  width: calc(
+    100% - 20px
+  ); /* Mengatur lebar tombol sesuai dengan lebar tabel */
+  padding: 10px;
+  margin: 10px auto; /* Pusatkan tombol */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registration .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Reading Log */
+.add-book {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-book h2 {
+  text-align: center;
+}
+
+.add-book .container {
+  overflow-x: auto;
+}
+
+.add-book table {
+  width: 100%;
+}
+
+.add-book table tr {
+  text-align: left;
+}
+
+.add-book table tr td {
+  padding: 10px;
+}
+
+.add-book input[type="text"],
+.add-book input[type="date"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.add-book .btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-book .btn:hover {
+  background-color: #0056b3;
+}
+
+.add-book .button-cell {
+  text-align: center;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #000;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .enrollment p {
+    font-size: 1.4rem;
+  }
+
+  /* Contact */
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+}
+
+/* HP */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

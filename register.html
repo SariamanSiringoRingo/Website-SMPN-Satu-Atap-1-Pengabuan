@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration - SMPN Satu Atap 1 Pengabuan</title>
+    <!--My style-->
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+        <section class="registration">
+            <h2>Form Registration</h2>
+          <form action="{{ url_for('register') }}" method="POST">
+            <table>
+              <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" required /></td>
+              </tr>
+              <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required /></td>
+              </tr>
+              <tr>
+                <td><label for="password">Password:</label></td>
+                <td>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                </td>
+              </tr>
+            </table>
+            <button type="submit" class="btn">Register</button>
+          </form>
+        </section>
+</html>

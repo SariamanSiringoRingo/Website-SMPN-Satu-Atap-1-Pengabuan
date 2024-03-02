@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz - SMPN Satu Atap 1 Pengabuan</title>
+
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Feather Icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!--My style-->
+    <link rel="stylesheet" href="/static/stylequ.css" />
+  </head>
+
+  <body>
+    <!--Navbar-->
+    <nav class="navbar">
+      <a href="{{ url_for('home') }}" class="navbar-log">SMPN Satu Atap 1 Pengabuan</a>
+
+      <div class="navbar-nav">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('aboutus') }}">About Us</a>
+        <a href="{{ url_for('enrollment') }}">Enrollment</a>
+        <a href="{{ url_for('download') }}">Download</a>
+        <a href="{{ url_for('gallery') }}">Gallery</a>
+        <a href="{{ url_for('quiz') }}">Quiz</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+
+    </nav>
+
+    <head>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+      <link href="static/stylequ.css" rel="stylesheet">
+      <title>QUIZ TIME</title>
+  
+      <script>
+          // Run script once DOM is loaded
+          document.addEventListener('DOMContentLoaded', function(){
+              // Number 1: When correct answer is clicked, change color to green
+              let correct = document.querySelector('.correct');
+              correct.addEventListener('click', function() {
+                  correct.style.backgroundColor = 'green';
+                  document.querySelector('#feedback1').innerHTML = 'Correct!';
+              });
+
+              // Number 1: When incorrect answer is clicked, change color to red
+              let incorrects = document.querySelectorAll('.incorrect');
+              for (let i = 0; i < incorrects.length; i++) {
+                  incorrects[i].addEventListener('click', function() {
+                      incorrects[i].style.backgroundColor = 'red';
+                      document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                  });
+              }
+
+              // Number 2: When correct answer is clicked, change color to green
+              let correct2 = document.querySelector('.correct#dua');
+              correct2.addEventListener('click', function() {
+                  correct2.style.backgroundColor = 'green';
+                  document.querySelector('#feedback2').innerHTML = 'Correct!';
+              });
+
+              // Number 2: When incorrect answer is clicked, change color to red
+              let incorrects2 = document.querySelectorAll('.incorrectQ2');
+              for (let i = 0; i < incorrects2.length; i++) {
+                  incorrects2[i].addEventListener('click', function() {
+                      incorrects2[i].style.backgroundColor = 'red';
+                      document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                  });
+              }
+
+              // Number 3: When correct answer is clicked, change color to green
+              let correct3 = document.querySelector('.correct#tiga');
+              correct3.addEventListener('click', function() {
+                  correct3.style.backgroundColor = 'green';
+                  document.querySelector('#feedback3').innerHTML = 'Correct!';
+              });
+
+              // Number 3: When incorrect answer is clicked, change color to red
+              let incorrects3 = document.querySelectorAll('.incorrectQ3');
+              for (let i = 0; i < incorrects3.length; i++) {
+                  incorrects3[i].addEventListener('click', function() {
+                      incorrects3[i].style.backgroundColor = 'red';
+                      document.querySelector('#feedback3').innerHTML = 'Incorrect';
+                  });
+              }
+
+              // Number 4: When correct answer is clicked, change color to green
+              let correct4 = document.querySelector('.correct#empat');
+              correct4.addEventListener('click', function() {
+                  correct4.style.backgroundColor = 'green';
+                  document.querySelector('#feedback4').innerHTML = 'Correct!';
+              });
+
+              // Number 4: When incorrect answer is clicked, change color to red
+              let incorrects4 = document.querySelectorAll('.incorrectQ4');
+              for (let i = 0; i < incorrects4.length; i++) {
+                  incorrects4[i].addEventListener('click', function() {
+                      incorrects4[i].style.backgroundColor = 'red';
+                      document.querySelector('#feedback4').innerHTML = 'Incorrect';
+                  });
+              }
+
+              // Number 5: When correct answer is clicked, change color to green
+              let correct5 = document.querySelector('.correct#lima');
+              correct5.addEventListener('click', function() {
+                  correct5.style.backgroundColor = 'green';
+                  document.querySelector('#feedback5').innerHTML = 'Correct!';
+              });
+
+              // Number 5: When incorrect answer is clicked, change color to red
+              let incorrects5 = document.querySelectorAll('.incorrectQ5');
+              for (let i = 0; i < incorrects5.length; i++) {
+                  incorrects5[i].addEventListener('click', function() {
+                      incorrects5[i].style.backgroundColor = 'red';
+                      document.querySelector('#feedback5').innerHTML = 'Incorrect';
+                  });
+              }
+
+              // Number 6: Check free response submisson
+                  document.querySelector('#checknam').addEventListener('click', function() {
+                  let input = document.querySelector('#enam');
+                  if (input.value === 'paramagnetik') {
+                      input.style.backgroundColor = 'green';
+                      document.querySelector('#feedback6').innerHTML = 'Correct!';
+                  } else {
+                      input.style.backgroundColor = 'red';
+                      document.querySelector('#feedback6').innerHTML = 'Incorrect';
+                  }
+              });
+
+              // Number 7: Check free response submisson
+              document.querySelector('#checktu').addEventListener('click', function() {
+                  let input = document.querySelector('#tujuh');
+                  if (input.value === 'daun') {
+                      input.style.backgroundColor = 'green';
+                      document.querySelector('#feedback7').innerHTML = 'Correct!';
+                  } else {
+                      input.style.backgroundColor = 'red';
+                      document.querySelector('#feedback7').innerHTML = 'Incorrect';
+                  }
+              });
+
+              // Number 8: Check free response submisson
+              document.querySelector('#checkdel').addEventListener('click', function() {
+                  let input = document.querySelector('#delapan');
+                  if (input.value === 'fotosintesis') {
+                      input.style.backgroundColor = 'green';
+                      document.querySelector('#feedback8').innerHTML = 'Correct!';
+                  } else {
+                      input.style.backgroundColor = 'red';
+                      document.querySelector('#feedback8').innerHTML = 'Incorrect';
+                  }
+              });
+
+              // Number 9: Check free response submisson
+              document.querySelector('#checksem').addEventListener('click', function() {
+                  let input = document.querySelector('#sembilan');
+                  if (input.value === 'endonom') {
+                      input.style.backgroundColor = 'green';
+                      document.querySelector('#feedback9').innerHTML = 'Correct!';
+                  } else {
+                      input.style.backgroundColor = 'red';
+                      document.querySelector('#feedback9').innerHTML = 'Incorrect';
+                  }
+              });
+
+              // Number 10: Check free response submisson
+              document.querySelector('#checksepu').addEventListener('click', function() {
+                  let input = document.querySelector('#sepuluh');
+                  if (input.value === 'termonasti') {
+                      input.style.backgroundColor = 'green';
+                      document.querySelector('#feedback8').innerHTML = 'Correct!';
+                  } else {
+                      input.style.backgroundColor = 'red';
+                      document.querySelector('#feedback8').innerHTML = 'Incorrect';
+                  }
+              });
+
+          });
+      </script>
+  </head>
+  <body>
+      <div class="header">
+          <h1>QUIZ TIME!</h1>
+      </div>
+
+      <div class="container">
+          <div class="section">
+              <h2>No.1: Pilihan Ganda </h2>
+              <hr>
+              <!-- multiple choice question here -->
+              <h3>Salah satu besaran turunan ?</h3>
+              <button class="incorrect">Panjang</button>
+              <button class="incorrect">Massa</button>
+              <button class="correct">Gaya</button>
+              <button class="incorrect Q3">Suhu</button>
+              <p id="feedback1"></p>
+          </div>
+
+          <div class="section">
+              <h2>No.2: Pilihan Ganda </h2>
+              <hr>
+              <!-- multiple choice question here -->
+              <h3>Berikut ini yang termasuk proses perubahan wujud zat yang melepaskan panas adalah pada saat zat ....</h3>
+              <button class="incorrectQ2">membeku dan menguap</button>
+              <button class="correct" id="dua">membeku dan mengembun</button>
+              <button class="incorrectQ2">mendidih dan mengkristal</button>
+              <button class="incorrectQ2">menyublin dan menguap</button>
+              <p id="feedback3"></p>
+          </div>
+
+          <div class="section">
+              <h2>No.3: Pilihan Ganda </h2>
+              <hr>
+              <!-- multiple choice question here -->
+              <h3>Fungsi selaput lendir hidung adalah untuk ....?</h3>
+              <button class="correct" id="tiga">menyesuaikan kelembapan udara</button>
+              <button class="incorrectQ3">membunuh kuman</button>
+              <button class="incorrectQ3">menetralkan racun yang masuk</button>
+              <button class="incorrectQ3">memilih gas-gas yang masuk</button>
+              <p id="feedback3"></p>
+          </div>
+
+          <div class="section">
+              <h2>No.4: Pilihan Ganda </h2>
+              <hr>
+              <!-- multiple choice question here -->
+              <h3>Peristiwa di mana siklus menstruasi menjadi tidak teratur dan berhenti untuk selamanya disebut ....</h3>
+              <button class="incorrectQ4">ovulasi</button>
+              <button class="incorrectQ4">menstruasi</button>
+              <button class="incorrectQ4">fertilisasi</button>
+              <button class="correct" id="empat">menopause</button>
+              <p id="feedback4"></p>
+          </div>
+
+          <div class="section">
+              <h2>No.5: Pilihan Ganda </h2>
+              <hr>
+              <!-- multiple choice question here -->
+              <h3>Kelompok bahan yang bersifat non-magnetik adalah....</h3>
+              <button class="incorrectQ5">baja dan besi</button>
+              <button class="incorrectQ5">baja dan seng</button>
+              <button class="correct" id="lima">aluminium dan seng</button>
+              <button class="incorrectQ5">aluminium dan besi</button>
+              <p id="feedback5"></p>
+          </div>
+
+          <div class="section">
+              <h2>No.6: Isian Singkat</h2>
+              <hr>
+              <!--free response question here -->
+              <h3>Zat yang dapat ditarik dengan lemah oleh magnet disebut....</h3>
+              <input type="text"></input>
+              <button id="checknam">Check Answer</button>
+              <p id="feedback6"></p>
+          </div>
+
+          <div class="section">
+              <h2>No.7: Isian Singkat</h2>
+              <hr>
+              <!--free response question here -->
+              <h3>Bagian tumbuhan tempat berlangsungnya fotosintesis yaitu</h3>
+              <input id="tujuh" type="text"></input>
+              <button id="checktu">Check Answer</button>
+              <p id="feedback7"></p>
+          </div>
+
+          <div class="section">
+              <h2>No.8: Isian Singkat</h2>
+              <hr>
+              <!--free response question here -->
+              <h3>Proses pengolahan makanan pada tumbuhan hijau disebut....</h3>
+              <input id="delapan" type="text"></input>
+              <button id="checkdel">Check Answer</button>
+              <p id="feedback8"></p>
+          </div>
+
+          <div class="section">
+              <h2>No.9: Isian Singkat</h2>
+              <hr>
+              <!--free response question here -->
+              <h3>Gerak yang terjadi akibat rangsangan yang berasal dari dalam sel atau tubuh tumbuhan adalah ....</h3>
+              <input id="sembilan" type="text"></input>
+              <button id="checksem">Check Answer</button>
+              <p id="feedback9"></p>
+          </div>
+
+          <div class="section">
+              <h2>No.10: Isian Singkat</h2>
+              <hr>
+              <!--free response question here -->
+              <h3> Gerak mekarnya bunga tulip pada musim semi termasuk jenis gerak....</h3>
+              <input id="sepuluh" type="text"></input>
+              <button id="checksepu">Check Answer</button>
+              <p id="feedback10"></p>
+          </div>
+      </div>
+  </body>
+  </body>
+</html>

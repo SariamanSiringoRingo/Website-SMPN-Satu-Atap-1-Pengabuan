@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - SMPN Satu Atap 1 Pengabuan</title>
+
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Feather Icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!--My style-->
+    <link rel="stylesheet" href="/static/stylegal.css" />
+  </head>
+
+  <body>
+    <!--Navbar-->
+    <nav class="navbar">
+      <a href="{{ url_for('home') }}" class="navbar-log"
+        >SMPN Satu Atap 1 Pengabuan</a
+      >
+
+      <div class="navbar-nav">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('aboutus') }}">About Us</a>
+        <a href="{{ url_for('enrollment') }}">Enrollment</a>
+        <a href="{{ url_for('download') }}">Download</a>
+        <a href="{{ url_for('gallery') }}">Gallery</a>
+        <a href="{{ url_for('quiz') }}">Quiz</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <!--Gallery-->
+    <section class="gallery" id="gallery">
+      <!-- Gallery -->
+      <div class="gallery">
+        <h2>Gallery</h2>
+      </div>
+
+      <!-- Content of Gallery  -->
+      <div class="container-sm">
+        <img src="static/gal8.jpg" class="large" alt="myfoto" />
+        <div class="photos">
+          <img src="static/gal1.jpg" class="small" alt="myfoto" />
+          <img src="static/gal2.jpg" class="small" alt="myfoto" />
+          <img src="static/gal3.jpg" class="small" alt="myfoto" />
+          <img src="static/gal4.jpg" class="small" alt="myfoto" />
+          <img src="static/gal5.jpg" class="small" alt="myfoto" />
+          <img src="static/gal6.jpg" class="small" alt="myfoto" />
+          <img src="static/gal7.jpg" class="small" alt="myfoto" />
+          <img src="static/gal8.jpg" class="small" alt="myfoto" />
+          <img src="static/gal9.jpg" class="small" alt="myfoto" />
+          <br /><br /><br />
+        </div>
+      </div>
+
+      <!-- Javascript -->
+    </section>
+
+    <!-- Feather Icons-->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- My Javascript-->
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
